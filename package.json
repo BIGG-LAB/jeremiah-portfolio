@@ -1,0 +1,13 @@
+{
+  "name": "jeremiah-portfolio",
+  "version": "1.0.0",
+  "description": "Nursing portfolio website for Ohiri Jeremiah Chukwuebuka",
+  "main": "index.html",
+  "scripts": {
+    "dev": "netlify dev",
+    "deploy": "netlify deploy --prod"
+  },
+  "keywords": ["nursing", "portfolio", "healthcare"],
+  "author": "Ohiri Jeremiah Chukwuebuka",
+  "license": "MIT"
+}
