@@ -230,6 +230,9 @@
   .about-aspiration p {
     font-size: 0.92rem; line-height: 1.75;
     color: rgba(255,255,255,0.75); margin: 0;
+    overflow: visible !important;
+    transform: none !important;
+    opacity: 1 !important;
   }
   .about-sidebar {}
   .about-info-card {
@@ -1016,6 +1019,11 @@
 
   // Slide-in animations
   const slideEls = document.querySelectorAll('.section-title, .about-info-card, .skill-card, .cert-card, .timeline-card, .research-block, .achievement-card');
+  // Fix: exclude about-aspiration paragraph from slide animation
+  document.querySelectorAll('.about-aspiration p').forEach(el => {
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+  });
   const slideObserver = new IntersectionObserver((entries) => {
     entries.forEach((e, idx) => {
       if (e.isIntersecting) {
