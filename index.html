@@ -1036,9 +1036,11 @@
     });
   }, { threshold: 0.1 });
   slideEls.forEach((el, idx) => {
-    el.style.opacity = '0';
-    el.style.transform = idx % 2 === 0 ? 'translateX(-20px)' : 'translateX(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    if (!el.closest('.about-aspiration')) {
+      el.style.opacity = '0';
+      el.style.transform = idx % 2 === 0 ? 'translateX(-20px)' : 'translateX(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    }
     slideObserver.observe(el);
   });
 
